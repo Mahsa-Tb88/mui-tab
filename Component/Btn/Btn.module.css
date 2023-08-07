@@ -1,0 +1,51 @@
+.btn {
+  background-color: #fff;
+  height: 50px;
+  font-size: 17px;
+  border: none;
+  color: #a09f9f;
+  cursor: pointer;
+  border-bottom: 0 solid #1976d2;
+  position: relative;
+}
+.active {
+  background-color: #fff;
+  height: 50px;
+  font-size: 17px;
+  border: none;
+  color: #1976d2;
+  cursor: pointer;
+  border-bottom: 2px solid #1976d2;
+  position: relative;
+}
+
+.active::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 0%;
+  background-color: #1976d2;
+  visibility: hidden;
+  transition-duration: 0.5s;
+}
+.active:hover.btn::before {
+  width: 100%;
+  visibility: visible;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 0%;
+  background-color: #1976d2;
+  visibility: hidden;
+  transition-duration: 0.5s;
+}
+.btn:hover.btn::before {
+  width: 100%;
+  visibility: visible;
+}

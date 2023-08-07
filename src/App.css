@@ -1,0 +1,23 @@
+.box {
+  border: 1px solid #e5eaf2;
+  border-radius: 5px;
+  margin-top: 80px;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 25px;
+}
+.btns {
+  display: flex;
+  width: 60%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10rem;
+  border-bottom: 1px solid #e5eaf2;
+}
+
+.box p{
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+}
