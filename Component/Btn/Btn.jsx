@@ -1,7 +1,7 @@
 import style from "./Btn.module.css";
 const Btn = ({ btn, clickHandler, dataBtn }) => {
   {
-    console.log(dataBtn,btn.id);
+    // console.log(dataBtn,btn.id);
   }
   return (
     <div>

@@ -12,23 +12,39 @@ const App = () => {
     id: 1,
     content: tabDate[0].content,
   });
+  const [isShow, setIsShow] = useState(true);
+
   const clickHandler = (id) => {
     const selectedBtn = tabDate.filter((tab) => tab.id == id);
     setDataBtn({ id: id, content: selectedBtn[0].content });
   };
+  const handlerShowingTab = () => {
+    // isShow ? setIsShow(false) : setIsShow(true);
+    setIsShow(!isShow);
+  };
   return (
-    <div className="box">
-      <div className="btns">
-        {tabDate.map((btn) => {
-          return (
-            <div key={btn.id}>
-               <Btn btn={btn} clickHandler={() => clickHandler(btn.id)} dataBtn={dataBtn}/> 
-            </div>
-          );
-        })}
+    <div>
+      <div className="showTab">
+        <button onClick={handlerShowingTab}>
+          {isShow ? "Hidden" : "Show Tab"}
+        </button>
       </div>
-
-      <p>{dataBtn.content}</p>
+      <div className={isShow ? "box" : "hidden-box"}>
+        <div className="btns">
+          {tabDate.map((btn) => {
+            return (
+              <div key={btn.id}>
+                <Btn
+                  btn={btn}
+                  clickHandler={() => clickHandler(btn.id)}
+                  dataBtn={dataBtn}
+                />
+              </div>
+            );
+          })}
+        </div>
+        <p>{dataBtn.content}</p>
+      </div>
     </div>
   );
 };

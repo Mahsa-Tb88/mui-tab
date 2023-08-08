@@ -1,10 +1,14 @@
 .box {
   border: 1px solid #e5eaf2;
-  border-radius: 5px;
+  border-radius: 8px;
   margin-top: 80px;
   width: 80%;
   margin: 0 auto;
   padding-top: 25px;
+}
+
+.hidden-box {
+  display: none;
 }
 .btns {
   display: flex;
@@ -16,8 +20,25 @@
   border-bottom: 1px solid #e5eaf2;
 }
 
-.box p{
+.box p {
   text-align: center;
   padding: 10px;
   font-size: 20px;
+}
+.showTab{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+}
+.showTab button{
+  background-color: #fff;
+  border: 2px solid #1976d2;
+  padding: 7px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.showTab button:hover{
+  background-color: #1976d2;
+  color: #fff;
 }
